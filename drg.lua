@@ -27,7 +27,25 @@ function get_sets()
         legs  = "Blood Cuisses",
         feet  = "Aurum Sabatons"
     }
-    
+    sets.precast.fc['Blue Magic'] = 
+	{
+    	ammo  = "White tathlum",
+    	head  = "Drachen armet",
+    	neck  = "Tempered chain",
+    	ear1  = "Harmonious earring",
+    	ear2  = "Harmonius earring",
+    	body  = "Dusk Jerkin +1",
+    	hands = "Alkyoneus's Brc.",
+    	ring1 = "Bloodbead ring",
+    	ring2 = "Bomb Queen Ring",
+    	back  = "Gigant mantle",
+    	waist = "Forest sash",
+    	legs  = "Homam Cosciales",
+    	feet  = "Dusk ledelsens +1"
+
+    }
+		
+	
     sets.midcast['Elemental Magic'] =
     {
     	ammo  = "White tathlum",
