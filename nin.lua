@@ -185,13 +185,13 @@ function get_sets()
     
 
      
-    sets.ws['Wheeling Thrust'] =
+    sets.ws['Blade: Jin'] =
     {
-        head  = "Hecatomb cap +1",
-        neck  = "Light Gorget",
+        head  = "Shura Zunari Kabuto +1",
+        neck  = "Ancient Torque",
         ear1  = "Harmonius Earring",
         ear2  = "Brutal earring",
-        body  = "Nocturnus Mail",
+        body  = "Haubergeon +1",
         hands = "Hct. mittens +1",
         ring1 = "Rajas Ring",
         ring2 = "Flame Ring",
