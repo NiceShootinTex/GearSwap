@@ -429,7 +429,7 @@ function get_sets()
     {
     	    ammo = "R. Curry Bun +1",
     	    ammo = "Marinara Pizza +1",
-			ammo = "Panacea",
+	    ammo = "Panacea",
     	    ammo = "Shihei",
     	    ammo = "Toolbag (Shihei)",
     	    ammo = "Echo Drops",
