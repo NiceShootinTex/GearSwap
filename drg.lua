@@ -402,7 +402,7 @@ function get_sets()
     {
         head  = "Haruspex Hat",
         ear1  = "Loquac. Earring",
-		legs  = "Homam Cosciales"
+	legs  = "Homam Cosciales"
     }
 
     sets.midcast['Utsusemi'] =
@@ -439,6 +439,27 @@ function get_sets()
     
     
 end
+
+Breaths = S{'Healing Breath','Flame Breath','Frost Breath',}
+
+function pet_midcast(spell)
+if Breaths:contains(spell.name) then
+equip(sets.midcast.hb)
+end	
+end
+
+Breaths = S{'Sand Breath','Flame Breath','Frost Breath','Hydro Breath','Gust Breath','Lightning Breath'}
+
+function pet_midcast(spell)
+if Breaths:contains(spell.name) then
+equip(sets.midcast.hb)
+end	
+end
+
+function pet_aftercast(spell)
+eq_default()
+end
+
 
 function precast(spell)
     eq_default_precast(spell)
