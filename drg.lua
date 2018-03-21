@@ -142,8 +142,11 @@ function get_sets()
     	body = "wyvern mail",
     	hands = "Ostreger mitts"
     }
-
-
+	
+	sets.midcast.elementalbreath =
+	{
+	head = "Wyrm Armet +1"
+	}		
 
     sets.ja['Jump'] =
     {
@@ -440,7 +443,7 @@ function get_sets()
     
 end
 
-Breaths = S{'Healing Breath','Flame Breath','Frost Breath',}
+Breaths = S{'Healing Breath'}
 
 function pet_midcast(spell)
 if Breaths:contains(spell.name) then
@@ -452,7 +455,7 @@ Breaths = S{'Sand Breath','Flame Breath','Frost Breath','Hydro Breath','Gust Bre
 
 function pet_midcast(spell)
 if Breaths:contains(spell.name) then
-equip(sets.midcast.hb)
+equip(sets.midcast.elementalbreath)
 end	
 end
 
