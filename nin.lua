@@ -5,6 +5,66 @@
 --------------------------------------------------------------------------------------------------
 -- NAME: Get Sets.
 --------------------------------------------------------------------------------------------------
+-- equip idle set (with feet at dusk to dawn)
+ function equip_idle()
+     windower.add_to_chat(8,'[Idle]')
+    if stance == "staff" then
+        equip(sets.idle,sets.staff)
+    else
+         equip(sets.idle)
+    end
+     if world.time >= (17*60) or world.time <= (7*60) then
+        equip({legs="Kog. Hakama +1", feet="Nin. Kyahan +1"})
+    end
+ end
+
+-- equip evasion set (with legs at dusk to dawn)
+ function equip_eva()
+     windower.add_to_chat(8,'[Evasion]')
+    if player.status == "Engaged" then
+        if stance == "staff" then
+            equip(sets.idle,sets.eva,sets.staff)
+        else
+             equip(sets.idle,sets.eva)
+        end
+         if world.time >= (17*60) or world.time <= (7*60) then
+            equip({legs="Kog. Hakama +1"})
+        end
+     end
+ end
+ 
+ -- equip balanced engaged set (with hands at dusk to dawn)
+ function equip_bal()
+     windower.add_to_chat(8,'[Balanced]')
+    if player.status == "Engaged" then
+        if player.status == "staff" then
+            equip(sets.idle,stes.bal,sets.staff)
+        else
+             equip(sets.idle,sets.bal)
+        end
+         if world.time >= (17*60) or world.time <= (7*60) then
+            equip({hands="Kog. Tekko +1"})
+        end
+     end
+ end
+ 
+ -- equip our weapon skill set (with feet at dusk to dawn)
+ function equip_ws()
+     windower.add_to_chat(8,'[Weapon Skill Blade: Metsu]')
+    if player.status == "Engaged" then
+        equip(sets.ws)
+        if world.time >= (17*60) or world.time <= (7*60) then
+            equip({feet="Kog. Kyahan +1"})
+        end
+     end
+ end
+ 
+ function equip_utsu()
+     windower.add_to_chat(8,'[Utsusemi]')
+    equip(sets.utsu)
+end
+
+
 function get_sets()
     -- Global Include --
     include('inc.lua')
@@ -196,25 +256,26 @@ function get_sets()
         ring1 = "Rajas Ring",
         ring2 = "Flame Ring",
         waist = "Warwolf belt",
-        legs  = "Hct. Subligar +1",
-        feet  = "Hct. Leggings +1",
+        legs  = "Byakko's Haidate",
+        feet  = "Rutter Sabatons",
         back  = "Cerb. mantle +1"
     }
     
-        sets.ws['Geirskogul'] =
+        sets.ws['Blade: Metsu'] =
     {
-        head  = "Hecatomb cap +1",
-        neck  = "Light Gorget",
-        ear1  = "Harmonius Earring",
-        ear2  = "Brutal earring",
-        body  = "Nocturnus Mail",
-        hands = "Hct. mittens +1",
-        ring1 = "Rajas Ring",
-        ring2 = "Flame Ring",
-        waist = "Warwolf belt",
-        legs  = "Hct. Subligar +1",
-        feet  = "Hct. Leggings +1",
-        back  = "Cerb. mantle +1"
+        head   = "Gnadbhod's Helm",
+        neck   = "Shadow Gorget", -- shadow, breeze, or thunder
+        ear1   = "Pixie Earring",
+        ear2   = "Brutal Earring",
+        body   = "Kirin's Osode",
+        hands  = "Hachiryu Kote",
+        ring1  = "Rajas Ring",
+        ring2  = "Adroit Ring +1",
+        back   = "Cuchulain's Mantle",
+        waist  = "Warwolf Belt",
+        legs   = "Byakko's Haidate",
+        feet   = "Enkidu's Leggings"
+    }
     }
     
         sets.ws['Impulse Drive'] =
