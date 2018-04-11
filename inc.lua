@@ -532,9 +532,9 @@ function cancel_buffs(spell)
     end
 
     -- Cancel Shadows --
-  --  if(spell.english == 'Utsusemi: Ichi') then
-    --    send_command('cancel copy image*')
-   -- end
+    if(spell.english == 'Utsusemi: Ichi') then
+        send_command('cancel copy image*')
+    end
 
     -- Cancel Stoneskin --
     if(spell.english == 'Stoneskin') then
